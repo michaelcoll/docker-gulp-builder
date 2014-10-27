@@ -2,5 +2,5 @@
 
 set -e
 
-npm install && bower install --allow-root
+npm install && bower install --allow-root --config.interactive=false
 gulp "$@"
