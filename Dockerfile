@@ -5,7 +5,7 @@ MAINTAINER Evonove info@evonove.it
 RUN apt-get update && apt-get upgrade -y
 
 # Build requirements
-RUN apt-get install -y build-essential curl
+RUN apt-get install -y build-essential git curl
 
 # Environment variables
 ENV NODE_VERSION 0.10.32
