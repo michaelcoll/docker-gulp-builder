@@ -10,7 +10,7 @@ RUN apt-get install -y build-essential git curl
 # Environment variables
 ENV NODE_VERSION 0.12.0
 ENV NODE_PATH /usr/local/lib/node_modules/
-ENV NPM_VERSION 2.5.1
+ENV NPM_VERSION 2.7.3
 
 # Frontend toolchain
 RUN apt-get install -y ruby ruby-dev
