@@ -2,5 +2,9 @@
 
 set -e
 
-npm install && bower install --allow-root --config.interactive=false
-gulp "$@"
+if [ "$1" = 'gulp' ]; then
+    npm install && bower install --allow-root --config.interactive=false
+    gulp "$@"
+else
+    exec "$@"
+fi
