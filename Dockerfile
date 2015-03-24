@@ -29,6 +29,7 @@ RUN curl -SLO "http://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x
 RUN npm install -g coffee-script gulp bower
 
 # Clean everything
+RUN npm config set tmp /root/.tmp && npm cache clean
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* && npm cache clear
 
 VOLUME  ["/opt/build"]
