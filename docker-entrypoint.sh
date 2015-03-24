@@ -2,9 +2,9 @@
 
 set -e
 
-if [ "$1" = 'gulp' ]; then
+if [ "$1" = 'shell' ]; then
+    exec "/bin/bash"
+else
     npm install && bower install --allow-root --config.interactive=false
     gulp "$@"
-else
-    exec "$@"
 fi
