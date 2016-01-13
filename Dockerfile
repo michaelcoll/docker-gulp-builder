@@ -1,7 +1,9 @@
-FROM node:5-slim
+FROM node:5
+
+ENV NPM_CONFIG_LOGLEVEL warn
 
 # Install gulp and bower
-RUN npm install -g gulp bower
+RUN npm install -g gulp bower node-sass phantomjs
 
 # Clean everything
 RUN npm config set tmp /root/.tmp && npm cache clean
