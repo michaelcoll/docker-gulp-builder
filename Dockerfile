@@ -1,5 +1,6 @@
 FROM node:5-slim
 
+# Install gulp and bower
 RUN npm install -g gulp bower
 
 # Clean everything
